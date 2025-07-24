@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Montage de PC - GretaBox</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="../assets/images/Logo_GRETABOX-removebg-preview.png"
+            alt="Logo de GRETABOX"
+            class="logo"
+          />
+        </div>
+        <nav class="header-nav">
+          <ul class="nav-left">
+            <li><a href="../../index.html">Accueil</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Formations</button>
+              <div class="dropdown-content">
+                <a href="cybersecuriter.html">Cybersécurité</a>
+                <a href="reseauxlan.html">Reseaux LAN</a>
+                <a href="montagepc.html" class="active">Monter un PC</a>
+              </div>
+            </div>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ide.html">IDE</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="cybersecurity-page">
+      <div class="hero-section">
+        <div class="container">
+          <h1 class="page-title">Guide Complet : Monter son PC</h1>
+          <p class="page-subtitle">
+            Apprenez à assembler votre ordinateur de A à Z
+          </p>
+          <div class="intro-text">
+            <p>
+              Construire son propre PC n'a jamais été aussi accessible ! Ce
+              guide vous accompagne étape par étape dans l'assemblage de votre
+              ordinateur, du choix des composants aux premiers tests. Une
+              expérience enrichissante qui vous permettra de comprendre le
+              fonctionnement de votre machine et d'économiser de l'argent.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Sommaire de la Formation -->
+        <section class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">🗂️ Sommaire du Tutoriel</h2>
+            <p class="section-subtitle">
+              Navigation rapide vers les différentes étapes
+            </p>
+          </div>
+
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">🧩</div>
+              <h3>Les Composants</h3>
+              <p>Découvrir chaque pièce et son rôle</p>
+              <a href="#composants" class="btn-section">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🛠️</div>
+              <h3>Outils & Préparation</h3>
+              <p>Le nécessaire pour commencer</p>
+              <a href="#preparation" class="btn-section">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🔧</div>
+              <h3>Montage Étape par Étape</h3>
+              <p>Guide détaillé d'assemblage</p>
+              <a href="#montage" class="btn-section">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">✅</div>
+              <h3>Tests & Finalisation</h3>
+              <p>Démarrage et vérifications finales</p>
+              <a href="#tests" class="btn-section">Aller à la section</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Composants -->
+        <section class="content-section" id="composants">
+          <div class="section-header">
+            <h2 class="section-title">🧩 Les Composants Essentiels</h2>
+            <p class="section-subtitle">
+              Comprendre chaque pièce de votre futur PC
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="../assets/images/processeurjpg.webp"
+                  alt="Processeur CPU"
+                />
+              </div>
+              <div class="card-content">
+                <h3>💻 Processeur (CPU)</h3>
+                <p>
+                  Le cerveau de votre ordinateur qui exécute toutes les
+                  instructions. Intel ou AMD, choisissez selon vos besoins et
+                  votre budget.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Intel</span>
+                  <span class="tag">AMD</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Vérifiez la compatibilité avec
+                  votre carte mère (socket)
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img src="../assets/images/cartemere.webp" alt="Carte mère" />
+              </div>
+              <div class="card-content">
+                <h3>🔌 Carte Mère</h3>
+                <p>
+                  La base qui connecte tous vos composants. Elle détermine les
+                  possibilités d'évolution et les fonctionnalités disponibles.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">ATX</span>
+                  <span class="tag">mATX</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Vérifiez le chipset et les ports
+                  disponibles
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="../assets/images/memoirevive.webp"
+                  alt="Mémoire RAM"
+                />
+              </div>
+              <div class="card-content">
+                <h3>⚡ Mémoire RAM</h3>
+                <p>
+                  La mémoire vive stocke temporairement les données en cours
+                  d'utilisation. Plus vous en avez, plus votre PC sera réactif.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">DDR4</span>
+                  <span class="tag">DDR5</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Minimum 16 Go pour un usage moderne
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img src="../assets/images/ventirad.webp" alt="Ventirad CPU" />
+              </div>
+              <div class="card-content">
+                <h3>🧊 Ventirad CPU</h3>
+                <p>
+                  Le ventirad assure le refroidissement du processeur. Il est
+                  essentiel pour garantir la stabilité et la longévité de votre
+                  PC.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Air</span>
+                  <span class="tag">Watercooling</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Appliquez une fine couche de pâte
+                  thermique et fixez le ventirad.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="../assets/images/cartegraphique.webp"
+                  alt="Carte graphique"
+                />
+              </div>
+              <div class="card-content">
+                <h3>🎮 Carte Graphique</h3>
+                <p>
+                  Responsable de l'affichage et des jeux. Essentielle pour le
+                  gaming, la vidéo et les tâches graphiques intensives.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">NVIDIA</span>
+                  <span class="tag">AMD</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Vérifiez la puissance de votre
+                  alimentation
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img src="../assets/images/ssdjpg.webp" alt="SSD Storage" />
+              </div>
+              <div class="card-content">
+                <h3>💾 Stockage (SSD/HDD)</h3>
+                <p>
+                  SSD pour la rapidité du système, HDD pour le stockage de
+                  masse. Combinez les deux pour un setup optimal.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">NVMe</span>
+                  <span class="tag">SATA</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> SSD NVMe pour l'OS, HDD pour les
+                  données
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="../assets/images/alimentation.webp"
+                  alt="Alimentation"
+                />
+              </div>
+              <div class="card-content">
+                <h3>🔋 Alimentation (PSU)</h3>
+                <p>
+                  Fournit l'énergie à tous vos composants. Ne lésinez pas sur la
+                  qualité, c'est la sécurité de votre PC.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">80+ Gold</span>
+                  <span class="tag">Modulaire</span>
+                </div>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Calculez la consommation + 20% de
+                  marge
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Composants Additionnels -->
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">📦</div>
+              <h3>Boîtier</h3>
+              <p>Protège et organise vos composants</p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🌀</div>
+              <h3>Refroidissement</h3>
+              <p>Ventirad CPU et ventilateurs case</p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🎛️</div>
+              <h3>Cartes d'Extension</h3>
+              <p>Wi-Fi, son, réseau selon vos besoins</p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🔌</div>
+              <h3>Câbles</h3>
+              <p>SATA, alimentation, souvent inclus</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Préparation -->
+        <section class="content-section" id="preparation">
+          <div class="section-header">
+            <h2 class="section-title">🛠️ Préparation et Outils</h2>
+            <p class="section-subtitle">Bien s'équiper avant de commencer</p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🧰</div>
+            <h4>Outils Nécessaires</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Outils Indispensables :</strong>
+                <p>
+                  🔧 Tournevis cruciforme magnétique<br />
+                  🔧 Tournevis plat (optionnel)<br />
+                  📏 Bracelet antistatique (recommandé)<br />
+                  🔦 Lampe ou éclairage d'appoint
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Espace de Travail :</strong>
+                <p>
+                  • Surface propre et stable<br />
+                  • Bonne ventilation<br />
+                  • Éclairage suffisant<br />
+                  • Éviter les tapis (électricité statique)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-content">
+                <h3>📋 Vérification Composants</h3>
+                <p>
+                  Déballez tous vos composants et vérifiez leur état.
+                  Assurez-vous d'avoir tous les câbles et accessoires.
+                </p>
+                <div class="example-box">
+                  <strong>Liste :</strong> CPU, Carte mère, RAM, GPU, SSD/HDD,
+                  PSU, Boîtier, Ventirad
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                <h3>⚡ Sécurité Électrostatique</h3>
+                <p>
+                  Déchargez-vous régulièrement en touchant une surface
+                  métallique reliée à la terre (radiateur, boîtier).
+                </p>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Évitez les vêtements synthétiques
+                  et les chaussettes
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                <h3>📖 Documentation</h3>
+                <p>
+                  Gardez les manuels de la carte mère et du boîtier à portée de
+                  main. Ils contiennent des informations cruciales.
+                </p>
+                <div class="example-box">
+                  <strong>Important :</strong> Schéma des connecteurs et layout
+                  des composants
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Montage -->
+        <section class="content-section" id="montage">
+          <div class="section-header">
+            <h2 class="section-title">🔧 Montage Étape par Étape</h2>
+            <p class="section-subtitle">Guide détaillé d'assemblage</p>
+          </div>
+
+          <div class="montage-steps-grid">
+            <!-- Étape 1 -->
+            <div class="attack-card">
+              <div class="attack-icon">1️⃣</div>
+              <h4>Étape 1 : Préparation du Boîtier</h4>
+              <div class="attack-details">
+                <div class="detail-item">
+                  <strong>Actions :</strong>
+                  <p>
+                    • Retirez les panneaux latéraux<br />
+                    • Installez les entretoises (standoffs) pour la carte
+                    mère<br />
+                    • Installez le bouclier I/O (fourni avec la carte mère)<br />
+                    • Préparez les câbles du boîtier
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <strong>⚠️ Attention :</strong>
+                  <p>
+                    Les entretoises doivent correspondre exactement aux trous de
+                    fixation de votre carte mère
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Étape 2 -->
+            <div class="attack-card">
+              <div class="attack-icon">2️⃣</div>
+              <h4>Étape 2 : Installation CPU et RAM</h4>
+              <div class="attack-details">
+                <div class="detail-item">
+                  <strong>CPU (Processeur) :</strong>
+                  <p>
+                    • Ouvrez le socket de la carte mère<br />
+                    • Placez délicatement le CPU (attention au sens !)<br />
+                    • Refermez le levier de verrouillage<br />
+                    • Ne forcez JAMAIS
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <strong>RAM (Mémoire) :</strong>
+                  <p>
+                    • Ouvrez les clips des slots RAM<br />
+                    • Alignez les encoches de la barrette<br />
+                    • Appuyez fermement jusqu'au clic<br />
+                    • Utilisez les slots 2 et 4 pour 2 barrettes
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Étape 3 -->
+            <div class="attack-card">
+              <div class="attack-icon">3️⃣</div>
+              <h4>Étape 3 : Ventirad et Carte Mère</h4>
+              <div class="attack-details">
+                <div class="detail-item">
+                  <strong>Ventirad CPU :</strong>
+                  <p>
+                    • Appliquez la pâte thermique si nécessaire<br />
+                    • Fixez le ventirad selon les instructions<br />
+                    • Connectez le câble au header CPU_FAN<br />
+                    • Vérifiez que le contact est uniforme
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <strong>Installation Carte Mère :</strong>
+                  <p>
+                    • Placez délicatement la carte mère sur les entretoises<br />
+                    • Alignez avec le bouclier I/O<br />
+                    • Vissez les fixations (ne pas trop serrer)<br />
+                    • Vérifiez qu'aucune vis ne manque
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Étape 4 -->
+            <div class="attack-card">
+              <div class="attack-icon">4️⃣</div>
+              <h4>Étape 4 : Stockage et Alimentation</h4>
+              <div class="attack-details">
+                <div class="detail-item">
+                  <strong>SSD/HDD :</strong>
+                  <p>
+                    • Fixez les disques dans le boîtier<br />
+                    • SSD NVMe directement sur la carte mère<br />
+                    • Connectez les câbles SATA (données + alimentation)<br />
+                    • Organisez les câbles proprement
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <strong>Alimentation (PSU) :</strong>
+                  <p>
+                    • Installez l'alimentation ventilateur vers le bas<br />
+                    • Fixez avec 4 vis depuis l'extérieur<br />
+                    • Câble principal 24 pins vers la carte mère<br />
+                    • Câble CPU 8 pins en haut à gauche
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Étape 5 -->
+            <div class="attack-card">
+              <div class="attack-icon">5️⃣</div>
+              <h4>Étape 5 : Carte Graphique et Finitions</h4>
+              <div class="attack-details">
+                <div class="detail-item">
+                  <strong>Carte Graphique :</strong>
+                  <p>
+                    • Retirez les caches PCI du boîtier<br />
+                    • Insérez la carte dans le premier slot PCI-E x16<br />
+                    • Fixez avec vis à l'arrière du boîtier<br />
+                    • Connectez l'alimentation GPU si nécessaire
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <strong>Connexions Finales :</strong>
+                  <p>
+                    • Câbles façade avant (bouton power, LED, USB)<br />
+                    • Ventilateurs case aux headers appropriés<br />
+                    • Vérifiez toutes les connexions<br />
+                    • Rangement des câbles (cable management)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Tests -->
+        <section class="content-section" id="tests">
+          <div class="section-header">
+            <h2 class="section-title">✅ Tests et Premier Démarrage</h2>
+            <p class="section-subtitle">
+              Vérifications finales et mise en route
+            </p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🔌</div>
+            <h4>Vérifications Avant Démarrage</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Checklist Finale :</strong>
+                <p>
+                  ✅ Alimentation branchée et switch sur ON<br />
+                  ✅ Câble 24 pins carte mère connecté<br />
+                  ✅ Câble CPU 8 pins connecté<br />
+                  ✅ RAM bien enfoncée (clips fermés)<br />
+                  ✅ Carte graphique bien insérée et alimentée<br />
+                  ✅ Câbles façade avant connectés
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>⚠️ Avant de démarrer :</strong>
+                <p>
+                  Vérifiez qu'aucun outil ne traîne dans le boîtier et que tous
+                  les câbles sont bien rangés loin des ventilateurs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-content">
+                <h3>🚀 Premier Démarrage</h3>
+                <p>
+                  Connectez écran, clavier, souris. Appuyez sur le bouton power.
+                  Si tout va bien, vous devriez voir le BIOS/UEFI s'afficher.
+                </p>
+                <div class="example-box">
+                  <strong>Bon signe :</strong> LEDs qui s'allument, ventilateurs
+                  qui tournent, affichage BIOS
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                <h3>⚙️ Configuration BIOS</h3>
+                <p>
+                  Vérifiez que tous vos composants sont détectés (CPU, RAM,
+                  stockage). Activez le profil XMP pour la RAM.
+                </p>
+                <div class="example-box">
+                  <strong>À vérifier :</strong> Températures CPU, vitesses
+                  ventilateurs, détection des disques
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                <h3>💿 Installation OS</h3>
+                <p>
+                  Préparez une clé USB avec Windows ou Linux. Bootez dessus et
+                  procédez à l'installation de votre système d'exploitation.
+                </p>
+                <div class="example-box">
+                  <strong>Conseil :</strong> Formatez en GPT pour UEFI,
+                  installez d'abord l'OS puis les pilotes
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dépannage -->
+          <div class="attack-card">
+            <div class="attack-icon">🔧</div>
+            <h4>Dépannage : Problèmes Courants</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>PC ne démarre pas :</strong>
+                <p>
+                  • Vérifiez l'interrupteur alimentation<br />
+                  • Contrôlez le branchement du bouton power<br />
+                  • Testez la RAM (une seule barrette)<br />
+                  • Vérifiez les connexions CPU et carte mère
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Pas d'affichage :</strong>
+                <p>
+                  • Écran branché sur la carte graphique (pas la carte mère)<br />
+                  • Carte graphique bien insérée et alimentée<br />
+                  • Testez un autre câble/écran<br />
+                  • Réinstallez la RAM
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Bruits anormaux :</strong>
+                <p>
+                  • Vérifiez que rien ne touche les ventilateurs<br />
+                  • Contrôlez la fixation du ventirad<br />
+                  • Écoutez si le bruit vient du disque dur<br />
+                  • Vérifiez les vibrations du boîtier
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Conseils Finaux -->
+        <section class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">🎓 Conseils d'Expert</h2>
+            <p class="section-subtitle">
+              Pour aller plus loin dans votre maîtrise
+            </p>
+          </div>
+
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">🌡️</div>
+              <h3>Surveillance Températures</h3>
+              <p>
+                Installez un logiciel de monitoring (HWiNFO64, MSI Afterburner)
+                pour surveiller les températures
+              </p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🔄</div>
+              <h3>Mises à Jour</h3>
+              <p>
+                Installez les derniers pilotes (GPU, carte mère) et mettez à
+                jour le BIOS si nécessaire
+              </p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🧹</div>
+              <h3>Maintenance</h3>
+              <p>
+                Nettoyez régulièrement la poussière avec de l'air comprimé pour
+                maintenir les performances
+              </p>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">⚡</div>
+              <h3>Overclocking</h3>
+              <p>
+                Une fois maîtrisé, vous pourrez overclocker pour plus de
+                performances (avec précaution)
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation vers autres formations -->
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">🔒</div>
+              <h3>Sécurité PC</h3>
+              <p>Protégez votre nouveau PC contre les cybermenaces</p>
+              <a href="cybersecuriter.html" class="btn-section"
+                >Formation Cybersécurité</a
+              >
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🌐</div>
+              <h3>Réseau</h3>
+              <p>Connectez votre PC au réseau local et Internet</p>
+              <a href="reseauxlan.html" class="btn-section"
+                >Formation Réseaux</a
+              >
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">💻</div>
+              <h3>Programmation</h3>
+              <p>Utilisez votre nouveau PC pour apprendre à coder</p>
+              <a href="ide.html" class="btn-section">IDE en ligne</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">📚</div>
+              <h3>Ressources</h3>
+              <p>Les guides et les techniques complémentaires</p>
+              <a href="ressources.html" class="btn-section">Accéder aux PDFs</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Vidéo Démonstration -->
+        <section class="content-section video-section">
+          <div class="section-header">
+            <h2 class="section-title">🎥 Démonstration Vidéo</h2>
+            <p class="section-subtitle">
+              Suivez le montage en pratique étape par étape
+            </p>
+          </div>
+
+          <div class="video-container">
+            <video
+              src="../assets/video/video-montage.mp4"
+              controls
+              class="main-video"
+            >
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <div class="video-info">
+              <h3>🔧 Montage d'un PC Gaming</h3>
+              <p>
+                Cette vidéo vous montre concrètement comment assembler un PC de
+                A à Z. Suivez attentivement chaque étape et n'hésitez pas à
+                mettre en pause pour bien comprendre les manipulations.
+              </p>
+              <div class="video-tips">
+                <div class="tip">
+                  <span class="tip-icon">💡</span>
+                  <span
+                    >Regardez en plein écran pour mieux voir les détails</span
+                  >
+                </div>
+                <div class="tip">
+                  <span class="tip-icon">⏸️</span>
+                  <span
+                    >Mettez en pause et suivez le rythme qui vous convient</span
+                  >
+                </div>
+                <div class="tip">
+                  <span class="tip-icon">🔄</span>
+                  <span>N'hésitez pas à revenir en arrière si besoin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Debut du Footer-->
+    <footer class="modern-footer">
+      <div class="footer-container">
+        <!-- Logo et description -->
+        <div class="footer-section footer-brand">
+          <img
+            src="../assets/images/Logo_GRETABOX-removebg-preview.png"
+            alt="Logo GretaBox"
+            class="footer-logo"
+          />
+          <p class="footer-description">
+            Plateforme pédagogique interactive dédiée à l'apprentissage de
+            l'informatique et des technologies numériques.
+          </p>
+        </div>
+
+        <!-- Liens rapides -->
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+            <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+            <li><a href="montagepc.html">Montage PC</a></li>
+            <li><a href="ide.html">IDE en ligne</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>Support technique</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕒</span>
+            <span>Lun - Ven : 9h - 18h</span>
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="../assets/images/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <img src="../assets/images/x.svg" alt="Twitter" />
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <img src="../assets/images/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <img src="../assets/images/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <p>
+            &copy; <span id="current-year">2025</span> GRETABOX. Tous droits
+            réservés.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="contact.html">Mentions légales</a>
+            <a href="contact.html">Politique de confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Fin du footer-->
+  </body>
+</html>

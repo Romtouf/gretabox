@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRETABOX - Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="index.html">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="reseauxlan.html">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                    <div class="test2">
+                <a href="connexion.html" class="connexion-btn">Connexion</a>
+                    </div>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="inscription">
+        <h2>Connexion</h2>
+                    <form action="#" method="POST">
+                        <label for="username">Nom d'utilisateur:</label>
+                        <input type="text" id="username" name="username" required>
+                        <span class="error-message" id="username-error"></span>
+    
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="error-message" id="password-error"></span>
+    
+                        <button type="submit" class="btn active">Connexion</button>
+    
+                        <div class="inscription-info">
+                            <p>Vous n'avez pas de compte? <a href="inscription.html">Inscrivez-vous ici</a></p>
+                        </div>
+                    </form>
+</section>
+
+
+
+    <footer class="footer">
+        <div class="social-media">
+            <p>Suivez-nous</p>
+                            <a href="#"><img src="../assets/images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/x.svg" alt="Twitter"></a>
+                <a href="#"><img src="../assets/images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="../assets/images/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+        <div class="contact-info">
+            <p>Contact</p>
+            <p>Email: contact@gretabox.com</p>
+        </div>
+    </footer>
+</body>
+</html>

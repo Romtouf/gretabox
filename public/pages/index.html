@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script2.js" defer></script>
+    <script src="../../config/env-simple.js"></script>
+    <script src="../../config/config.js"></script>
+    <script src="../assets/js/gretix.js" defer></script>
+</head>
+<body>
+    <!--Debut du Header-->
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="index.html" class="active">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations</button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="reseauxlan.html">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                <div class="test2">
+                </div>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Fin du Header-->
+
+    <!-- Section Hero d'accueil -->
+    <section class="welcome-hero">
+        <div class="container">
+            <h1 class="welcome-title">Bienvenue sur GretaBox</h1>
+            <div class="welcome-description">
+                <p>Une plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.</p>
+                <p>Il propose une série de tutoriels pratiques abordant divers sujets comme la cybersécurité, le montage de PC ou encore le réseau LAN. Chaque tutoriel est conçu pour être accessible et formateur, permettant aux utilisateurs de développer leurs compétences à leur rythme.</p>
+                <p>En plus des contenus éducatifs, GretaBox met à disposition un IDE (environnement de développement intégré) en ligne, accessible directement depuis le navigateur, pour coder en toute simplicité sans avoir à installer de logiciel. Le site s'adresse particulièrement aux apprenants et formateurs cherchant un outil centralisé et intuitif pour l'apprentissage technique.</p>
+            </div>
+        </div>
+    </section>
+
+<!--Cartes de présentations des tutos- Washo -->
+<div class="card-container">
+    <!--Carousel simple de petites cartes-->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-header">
+                <h2 class="carousel-title">Composants PC</h2>
+            </div>
+            
+            <div class="carousel-track-container">
+                <button class="carousel-nav prev" id="prevBtn">‹</button>
+                <button class="carousel-nav next" id="nextBtn">›</button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/cartemere.webp" alt="Carte mère">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Carte Mère</h3>
+                            <span class="slide-tag">Essentiel</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/processeurjpg.webp" alt="Processeur">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Processeur</h3>
+                            <span class="slide-tag">Performance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/ventirad.webp" alt="Ventirad">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Ventirad</h3>
+                            <span class="slide-tag">Refroidissement</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/memoirevive.webp" alt="Mémoire vive">
+                        <div class="slide-content">
+                            <h3 class="slide-title">RAM</h3>
+                            <span class="slide-tag">Vitesse</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/cartereseau.webp" alt="Carte réseau">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Réseau</h3>
+                            <span class="slide-tag">Connectivité</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/cartegraphique.webp" alt="Carte graphique">
+                        <div class="slide-content">
+                            <h3 class="slide-title">GPU</h3>
+                            <span class="slide-tag">Gaming</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/ssdjpg.webp" alt="SSD">
+                        <div class="slide-content">
+                            <h3 class="slide-title">SSD</h3>
+                            <span class="slide-tag">Stockage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/alimentation.webp" alt="Alimentation">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Alimentation</h3>
+                            <span class="slide-tag">Énergie</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img class="slide-image" src="../assets/images/boitier.webp" alt="Boîtier">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Boîtier</h3>
+                            <span class="slide-tag">Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+    </div>
+    <h2>Nos tutoriels</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-image">
+                <img src="../assets/images/cybersecrurity.webp" alt="Tutoriel Cybersécurité">
+            </div>
+            <div class="card-content">
+                <h3>Cybersécurité</h3>
+                <p>Apprenez les bases de la cybersécurité : protection des données, détection des menaces et bonnes pratiques de sécurité informatique.</p>
+                <div class="card-tags">
+                    <span class="tag">Sécurité</span>
+                    <span class="tag">Protection</span>
+                </div>
+                <a href="cybersecuriter.html" class="btn">Voir le tutoriel</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="../assets/images/montagepc.webp" alt="Tutoriel Montage PC">
+            </div>
+            <div class="card-content">
+                <h3>Montage de PC</h3>
+                <p>Guide complet pour assembler votre propre ordinateur : choix des composants, assemblage et optimisation des performances.</p>
+                <div class="card-tags">
+                    <span class="tag">Hardware</span>
+                    <span class="tag">Assemblage</span>
+                </div>
+                <a href="montagepc.html" class="btn">Voir le tutoriel</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="../assets/images/reseauxlan.webp" alt="Tutoriel Réseau LAN">
+            </div>
+            <div class="card-content">
+                <h3>Réseau LAN</h3>
+                <p>Découvrez la configuration et gestion des réseaux locaux : installation, configuration et dépannage des équipements réseau.</p>
+                <div class="card-tags">
+                    <span class="tag">Réseau</span>
+                    <span class="tag">Configuration</span>
+                </div>
+                <a href="reseauxlan.html" class="btn">Voir le tutoriel</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin des cartes de présentations des tutos-->
+<!--Debut de la section IDE-Washo -->
+<div class="text-ide">
+    <h2>Découvrez notre IDE en ligne</h2>
+</div>
+<div class="ide-container">
+    <div class="card ide-card">
+        <div class="card-image">
+                            <img src="../assets/images/ide.png" alt="IDE en ligne">
+        </div>
+        <div class="card-content">
+            <h3>IDE en ligne</h3>
+            <p>Accédez à notre environnement de développement intégré directement depuis votre navigateur. Codez en HTML, CSS et JavaScript sans installation.</p>
+            <div class="card-tags">
+                <span class="tag">Développement</span>
+                <span class="tag">En ligne</span>
+            </div>
+            <a href="ide.html" class="btn">Accéder à l'IDE</a>
+        </div>
+    </div>
+</div>
+
+<!-- <div class ="test"> -->
+    <!-- <h2>Test</h2> -->
+    <!-- <p>Test de la page d'accueil</p> -->
+    <!-- <a href="mailto:contact@gretabox.com"><img src="/image/email-14-svgrepo-com.svg" alt="Logo de GRETABOX" class="logo"></a> -->
+<!-- </div> -->
+
+    <!--Debut du Footer-->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Logo et description -->
+            <div class="footer-section footer-brand">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo GretaBox" class="footer-logo">
+                <p class="footer-description">Plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.</p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+                    <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+                    <li><a href="montagepc.html">Montage PC</a></li>
+                    <li><a href="ide.html">IDE en ligne</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>Support technique</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>Lun - Ven : 9h - 18h</span>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="../assets/images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="../assets/images/x.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="../assets/images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="../assets/images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; <span id="current-year">2025</span> GRETABOX. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html">Mentions légales</a>
+                    <a href="contact.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bot Gretix -->
+                <img src="../assets/images/gretix.webp" class="bot" alt="image du bot" id="gretix-bot">
+        <img src="../assets/images/bulle.webp" alt="Image de la bulle" class="bulle">
+    </footer>
+
+    <!-- Modale du Chatbot Gretix -->
+    <div id="gretix-modal" class="gretix-modal">
+        <div class="gretix-modal-content">
+            <div class="gretix-header">
+                <img src="../assets/images/gretix.webp" alt="Gretix" class="gretix-avatar">
+                <h3>Gretix - Assistant GretaBox</h3>
+                <span class="gretix-close">&times;</span>
+            </div>
+            <div class="gretix-chat-container" id="gretix-chat">
+                <div class="gretix-message gretix-bot-message">
+                    <div class="gretix-message-content">
+                        Bonjour ! Je suis Gretix, votre assistant virtuel GretaBox. Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+            </div>
+            <div class="gretix-input-container">
+                <input type="text" id="gretix-input" placeholder="Tapez votre message..." autocomplete="off">
+                <button id="gretix-send">Envoyer</button>
+            </div>
+        </div>
+    </div>
+    <!--Fin du footer-->
+</body>
+</html>

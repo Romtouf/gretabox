@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cybersecuriter</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="../../index.html">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations</button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html" class="active">Cybersécurité</a>
+                        <a href="reseauxlan.html">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                </div>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="cybersecurity-page">
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="page-title">Mise en place de la sécurité au sein d'une entreprise</h1>
+                <p class="page-subtitle">Comment sécuriser un réseau avec un pare-feu/VPN, les bonnes pratiques de la sécurité à respecter pour tous les employés.</p>
+                <div class="intro-text">
+                    <p>Ici, nous allons voir quels sont les outils nécessaires, ainsi que leurs fonctionnements, à une bonne sécurité au sein d'une entreprise.
+                    Dans un premier temps, nous verrons quelles sont les précautions à respecter, ainsi que la prévention à mettre en place, au niveau utilisateur pour assurer le moins de failles humaines possible.
+                    Par la suite, nous définirons ce que sont les firewall et VPN pour que vous ayez les premières armes pour sécuriser votre réseau.
+                    Et enfin, nous verrons la mise en place de la sécurité d'un réseau, à partir de celui créé lors du tuto précédent, avec des exemples concrets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Sommaire de la Formation -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">📋 Sommaire de la Formation</h2>
+                    <p class="section-subtitle">Navigation rapide vers les différentes sections</p>
+                </div>
+                
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">ℹ️</div>
+                        <h3>Introduction</h3>
+                        <p>Pourquoi la cybersécurité est cruciale</p>
+                        <a href="#introduction" class="btn-section">Aller à la section</a>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">⚠️</div>
+                        <h3>Types d'Attaques</h3>
+                        <p>Phishing, Ransomware, DDoS, Trojans</p>
+                        <a href="#cyberattaques" class="btn-section">Aller à la section</a>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Protection</h3>
+                        <p>Bonnes pratiques et gestes simples</p>
+                        <a href="#protection" class="btn-section">Aller à la section</a>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🔥</div>
+                        <h3>Firewall & VPN</h3>
+                        <p>Sécurisation du réseau d'entreprise</p>
+                        <a href="#firewall-vpn" class="btn-section">Aller à la section</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Introduction -->
+            <section class="content-section" id="introduction">
+                <div class="section-header">
+                    <h2 class="section-title">I. Introduction</h2>
+                    <p class="section-subtitle">La Cybersécurité est-elle cruciale pour les Petites Entreprises ?</p>
+                </div>
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Protection des données</h3>
+                        <p>Sécuriser les informations clients, les données financières et les secrets professionnels.</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Conformité</h3>
+                        <p>Respecter le RGPD et la Loi Informatique et Libertés pour éviter les sanctions de la CNIL (de 500 € à 20 000 €).</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">💰</div>
+                        <h3>Prévention financière</h3>
+                        <p>Se protéger contre la fraude, les rançongiciels et les piratages.</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🤝</div>
+                        <h3>Réputation</h3>
+                        <p>Maintenir la confiance des clients et des partenaires.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Cyberattaques -->
+            <section class="content-section" id="cyberattaques">
+                <div class="section-header">
+                    <h2 class="section-title">II. Cyberattaques</h2>
+                </div>
+                
+                <div class="definition-box">
+                    <h3>Qu'est-ce qu'une cyberattaque ?</h3>
+                    <p>Une cyberattaque est une action malveillante menée via un réseau informatique (comme Internet) dans le but de :</p>
+                    <ul class="definition-list">
+                        <li>Voler des données (identifiants, numéros de carte, etc.)</li>
+                        <li>Bloquer ou perturber un système</li>
+                        <li>Demander une rançon</li>
+                        <li>Ou simplement nuire</li>
+                    </ul>
+                </div>
+
+                <h3 class="subsection-title">Les types de cyberattaques les plus courants</h3>
+                <div class="attack-types-grid">
+                    <div class="attack-card">
+                        <div class="attack-icon">🎣</div>
+                        <h4>Phishing</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Objectif :</strong>
+                                <p>Voler des informations personnelles</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Explication :</strong>
+                                <p>Le pirate envoie un email ou un message qui semble provenir d'une source fiable. Il incite la victime à cliquer sur un lien ou à fournir des informations personnelles.</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>Un employé reçoit un email prétendant être de la banque de l'entreprise, lui demandant de vérifier ses informations de compte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">🔒</div>
+                        <h4>Ransomware</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Objectif :</strong>
+                                <p>Bloquer vos fichiers et demander de l'argent pour les rendre</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Explication :</strong>
+                                <p>L'hacker installe un logiciel malveillant qui chiffre vos fichiers. Vous ne pouvez plus y accéder sauf si vous payez une rançon (souvent en Bitcoin).</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>Un hôpital se fait infecter par un ransomware. Tous les dossiers des patients deviennent illisibles. Les pirates demandent 1 million d'euros pour déverrouiller les fichiers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">⚡</div>
+                        <h4>Attaque DDoS</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Objectif :</strong>
+                                <p>Rendre un site web indisponible</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Explication :</strong>
+                                <p>Le pirate utilise des milliers d'ordinateurs infectés pour inonder un site de requêtes. Le site n'arrive plus à répondre et tombe en panne.</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>Un site de vente en ligne est attaqué pendant le Black Friday. Il devient inaccessible pour les clients. Résultat : perte de ventes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">🐴</div>
+                        <h4>Cheval de Troie (Trojan)</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Objectif :</strong>
+                                <p>Espionner ou ouvrir une porte pour d'autres attaques</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Explication :</strong>
+                                <p>Il s'agit d'un programme qui semble légitime (ex : un jeu gratuit), mais qui cache un code malveillant. Une fois installé, il permet au hacker de prendre le contrôle du système.</p>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>Vous téléchargez un "convertisseur PDF gratuit". En réalité, il installe un cheval de Troie qui envoie toutes vos frappes clavier (dont vos mots de passe) à un hacker.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Protection -->
+            <section class="content-section protection-section" id="protection">
+                <div class="section-header">
+                    <h3 class="section-title">Comment se protéger des cyberattaques ?</h3>
+                    <p class="section-subtitle">Même sans être un expert, voici des gestes simples :</p>
+                </div>
+
+                <div class="protection-summary">
+                    <div class="protection-item">
+                        <span class="protection-emoji">🔐</span>
+                        <span>Utiliser des mots de passe forts et différents pour chaque site</span>
+                    </div>
+                    <div class="protection-item">
+                        <span class="protection-emoji">📧</span>
+                        <span>Ne jamais cliquer sur un lien ou une pièce jointe douteuse</span>
+                    </div>
+                    <div class="protection-item">
+                        <span class="protection-emoji">🔄</span>
+                        <span>Mettre à jour régulièrement vos logiciels</span>
+                    </div>
+                    <div class="protection-item">
+                        <span class="protection-emoji">☁️</span>
+                        <span>Faire des sauvegardes de vos fichiers importants</span>
+                    </div>
+                    <div class="protection-item">
+                        <span class="protection-emoji">🧠</span>
+                        <span>Se former un peu à la cybersécurité pour repérer les pièges</span>
+                    </div>
+                </div>
+
+                <div class="protection-details">
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🔐</span>
+                            <h4>Mots de passe forts</h4>
+                        </div>
+                        <p>Utiliser des mots de passe forts et différents pour chaque site est essentiel pour protéger vos comptes en ligne. Un bon mot de passe doit contenir des majuscules, minuscules, chiffres et symboles (comme F9!lR@x2#Mqs). Si vous utilisez le même mot de passe partout, un pirate qui réussit à en obtenir un seul peut accéder à tous vos comptes.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> M4!zon$24Y pour Amazon, F@ceb00k!92 pour Facebook, etc., au lieu de VotreNom123 pour tous vos comptes.
+                        </div>
+                    </div>
+
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">📧</span>
+                            <h4>Vigilance face aux emails</h4>
+                        </div>
+                        <p>Ne jamais cliquer sur un lien ou une pièce jointe douteuse vous protège contre les attaques par phishing. Les pirates imitent des entreprises fiables pour vous inciter à cliquer. Avant de cliquer, vérifiez l'adresse de l'expéditeur, les fautes ou les urgences inhabituelles.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Vous recevez un message de "info@paypal-alert.com" disant : "Une activité suspecte a été détectée. Cliquez ici pour vérifier votre compte." → C'est une arnaque : ne cliquez pas !
+                        </div>
+                    </div>
+
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🔄</span>
+                            <h4>Mises à jour</h4>
+                        </div>
+                        <p>Mettre à jour régulièrement vos logiciels permet de corriger les failles de sécurité et de vous protéger contre les dernières menaces. Sans mise à jour, un pirate peut exploiter une faiblesse de votre système pour s'y introduire.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Une ancienne version de Zoom contenait une faille que des hackers utilisaient pour espionner les utilisateurs à distance. Une mise à jour l'a corrigée.
+                        </div>
+                    </div>
+
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">☁️</span>
+                            <h4>Sauvegardes</h4>
+                        </div>
+                        <p>Faire des sauvegardes de vos fichiers importants évite de tout perdre en cas de panne, de vol ou d'attaque par un virus destructeur. Il est conseillé de sauvegarder sur un disque dur externe ou un service cloud au moins une fois par semaine.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Si un ransomware chiffre vos documents et vous demande de l'argent pour les récupérer, vous pouvez simplement restaurer vos fichiers depuis votre sauvegarde et ne rien payer.
+                        </div>
+                    </div>
+
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🧠</span>
+                            <h4>Formation</h4>
+                        </div>
+                        <p>Se former un peu à la cybersécurité pour repérer les pièges permet d'éviter de nombreuses erreurs. Connaître les bases renforce votre vigilance. De nombreux sites et vidéos gratuits vous permettent d'apprendre les bons réflexes.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Après avoir vu une courte vidéo de sensibilisation, Julie a su repérer un faux mail de Netflix qui lui demandait de mettre à jour son abonnement… avec une fausse page de paiement.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section-header">
+                <h3 class="section-title">Un exemple réel de cyberattaque (avec une explication simple) :</h3>
+            </div>
+            <!-- Section Cas réel -->
+            <section class="content-section case-study">
+                <div class="section-header">
+                    <h3 class="section-title">Cas réel : L'attaque WannaCry (2017)</h3>
+                    <p class="section-subtitle">Une des plus grandes attaques mondiales de type ransomware</p>
+                </div>
+
+                <div class="case-study-content">
+                    <div class="case-overview">
+                        <h4>Que s'est-il passé ?</h4>
+                        <p>En mai 2017, un virus appelé WannaCry s'est propagé très rapidement sur Internet. En quelques heures, plus de <strong>300 000 ordinateurs dans 150 pays</strong> ont été infectés, y compris dans :</p>
+                        <ul class="affected-list">
+                            <li>Des hôpitaux (comme le NHS au Royaume-Uni)</li>
+                            <li>Des entreprises (Renault, FedEx…)</li>
+                            <li>Des écoles et universités</li>
+                        </ul>
+                        <div class="case-overview">
+                        <h4>💡 Le plus fou ?</h4>
+                            <p>
+                                Microsoft avait déjà corrigé la faille, mais beaucoup de gens n’avaient pas fait la
+                                mise à jour.
+                                Ceux qui avaient un antivirus à jour + système à jour n’ont pas été infectés.  
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="attack-process">
+                        <h4>Comment ça s'est passé ?</h4>
+                        <div class="process-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <p>Le virus exploitait une faille de sécurité dans Windows</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <p>Une fois dans un ordinateur, il « chiffrait » (verrouillait) tous les fichiers</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <p>Un message s'affichait : "Vos fichiers sont cryptés. Payez 300$ en Bitcoin pour les récupérer."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h3 class="subsection-title">Comment fonctionne un antivirus ?</h3>
+            <p>
+                Un antivirus, c’est un logiciel qui protège ton ordi contre les programmes
+                malveillants (virus, trojans, ransomwares, etc.)
+            </p>
+                <div class="attack-types-grid">
+                    <div class="attack-card">
+                        <div class="attack-icon">🔍</div>
+                        <h4>Scanner</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Explication :</strong>
+                                <p>
+                                    Il analyse tes fichiers, tes téléchargements et ta navigation pour détecter des
+                                    programmes suspects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">🧠</div>
+                        <h4>Détecter</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Il utilise :</strong>
+                                <li>
+                                    Une base de données de virus connus (comme une fiche d’identité),
+                                </li>
+                                <br>
+                                <li>
+                                    De l’intelligence artificielle pour repérer des comportements bizarres,
+                                    même inconnus.
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">⛔</div>
+                        <h4>Bloquer</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>Il met en quarantaine ou supprime tout ce qui peut être dangereux.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-card">
+                        <div class="attack-icon">♻️</div>
+                        <h4>Se mettre à jour</h4>
+                        <div class="attack-details">
+                            <div class="detail-item">
+                                <strong>Exemple :</strong>
+                                <p>
+                                    Il se met à jour très souvent, car de nouveaux virus apparaissent tous les
+                                    jours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Suite du cours : Bonnes pratiques intermédiaires, gestion des appareils, conclusion, firewall, VPN -->
+            <section class="content-section" id="bonnes-pratiques">
+                <div class="section-header">
+                    <h2 class="section-title">Bonnes pratiques intermédiaires</h2>
+                    <p class="section-subtitle">Renforcez la sécurité de votre entreprise avec des mesures avancées</p>
+                </div>
+                <div class="protection-details">
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🔑</span>
+                            <h4>Authentification multi-facteurs (MFA)</h4>
+                        </div>
+                        <p>Activez la MFA pour les comptes essentiels (email, banque, bases de données clients). Utilisez des applications comme <strong>Authy</strong>, <strong>Google Authenticator</strong> ou <strong>Microsoft Authenticator</strong> pour une sécurité renforcée.</p>
+                    </div>
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">☁️</span>
+                            <h4>Sauvegardes régulières</h4>
+                        </div>
+                        <p>Automatisez les sauvegardes avec des services sécurisés comme <strong>Acronis</strong>, <strong>Backblaze</strong> ou <strong>Carbonite</strong> pour éviter toute perte de données.</p>
+                    </div>
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">📶</span>
+                            <h4>Sécurisation du réseau</h4>
+                        </div>
+                        <p>Créez des réseaux Wi-Fi distincts pour les invités et les opérations de l’entreprise. Utilisez des pare-feux fiables comme <strong>Cisco Meraki</strong>, <strong>Ubiquiti</strong> ou <strong>Sophos</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="gestion-appareils">
+                <div class="section-header">
+                    <h2 class="section-title">Gestion des appareils en entreprise</h2>
+                    <p class="section-subtitle">Sécurisez tous les types d'appareils utilisés par vos équipes</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🍏 Appareils Apple</h3>
+                            <ul>
+                                <li>Gestion via <strong>Jamf</strong> ou <strong>Apple Business Manager</strong></li>
+                                <li>Antivirus : <strong>Malwarebytes</strong> ou <strong>Sophos</strong></li>
+                                <li>VPN : <strong>ExpressVPN</strong>, <strong>NordVPN Teams</strong>, <strong>Surfshark</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🪟 Appareils Windows & Android</h3>
+                            <ul>
+                                <li>Gestion via <strong>Microsoft Intune</strong></li>
+                                <li>Antivirus : <strong>Bitdefender</strong>, <strong>CrowdStrike Falcon</strong>, <strong>Windows Defender for Business</strong></li>
+                                <li>VPN : <strong>NordVPN Teams</strong>, <strong>ExpressVPN</strong>, <strong>ProtonVPN</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🌍 Pratiques communes</h3>
+                            <ul>
+                                <li>Accès distant via <strong>Citrix</strong>, <strong>Amazon WorkSpaces</strong> ou <strong>VMware Horizon</strong></li>
+                                <li>Gestionnaire de mots de passe : <strong>1Password</strong> ou <strong>LastPass</strong></li>
+                                <li>Formation cybersécurité deux fois par an</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="conclusion-cyber">
+                <div class="section-header">
+                    <h2 class="section-title">Conclusion</h2>
+                    <p class="section-subtitle">La cybersécurité, un investissement stratégique</p>
+                </div>
+                <div class="definition-box">
+                    <p>Adopter des pratiques solides en cybersécurité n'est plus une option, mais une nécessité pour la survie et la crédibilité de toute entreprise. Ces mesures doivent être considérées comme des coûts d'exploitation standards, au même titre que l'assurance ou la maintenance informatique.<br><br>
+                    <strong>Le coût de la négligence</strong> (violation de données, rançongiciel, erreur humaine) peut être dévastateur : pertes financières, atteinte à la réputation, poursuites judiciaires, interruption d'activité.<br><br>
+                    <strong>Intégrez la cybersécurité au cœur de vos processus</strong> pour assurer la pérennité de votre entreprise.</p>
+                </div>
+            </section>
+
+            <!-- Section Firewall, VPN & Architectures de sécurité au style "cas réel" -->
+            <section class="content-section case-study" id="firewall-vpn-architecture">
+                <div class="section-header">
+                    <h2 class="section-title">Firewall, VPN & Architectures de sécurité</h2>
+                    <p class="section-subtitle">Comprendre et choisir la bonne protection pour votre réseau</p>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-overview dark-card">
+                        <h4 class="gold-title">🛡️ Qu'est-ce qu'un Firewall ?</h4>
+                        <p>Le firewall est la porte de votre réseau : il filtre les entrées et sorties, protège contre les intrusions et doit être placé entre le réseau interne et Internet.</p>
+                        <h4 class="gold-title">🔄 Filtrage bidirectionnel</h4>
+                        <p>Contrôlez qui entre et qui sort de votre réseau, pour éviter les fuites de données et les accès non autorisés.</p>
+                        <h4 class="gold-title">📍 Positionnement stratégique</h4>
+                        <p>Le firewall doit être un passage obligé entre le réseau protégé et l'extérieur, et peut être physique ou logiciel.</p>
+                    </div>
+                    <div class="attack-process dark-card">
+                        <h4 class="gold-title">⚠️ Fonctionnement & Limites</h4>
+                        <ul>
+                            <li>Empêche les intrus d'entrer totalement</li>
+                            <li>Filtre selon IP, port, et parfois application</li>
+                            <li>Contrôle les sorties du réseau</li>
+                            <li>Ne protège pas contre les virus ou menaces internes</li>
+                            <li>Nécessite une configuration adaptée</li>
+                        </ul>
+                        <h4 class="gold-title">📋 Politique de sécurité</h4>
+                        <p>Commencez par tout interdire, puis autorisez progressivement ce qui est nécessaire. Affinez selon les besoins des utilisateurs et des groupes.</p>
+                    </div>
+                </div>
+                <div class="cards-grid">
+                    <div class="card dark-card">
+                        <div class="card-content">
+                            <h3>🔗 Architecture simple</h3>
+                            <p>Filtrage IP et ports. Solution économique mais limitée au filtrage réseau.</p>
+                        </div>
+                    </div>
+                    <div class="card dark-card">
+                        <div class="card-content">
+                            <h3>🧑‍💻 Architecture Proxy</h3>
+                            <p>Ajoute un filtre applicatif (HTTP/FTP). Permet de garder un historique et de mieux contrôler le trafic.</p>
+                        </div>
+                    </div>
+                    <div class="card dark-card">
+                        <div class="card-content">
+                            <h3>🛡️ Zone DMZ</h3>
+                            <p>Permet de rendre des serveurs accessibles sur Internet tout en protégeant le réseau interne grâce à un double firewall.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="protection-details">
+                    <div class="protection-card dark-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">✉️</span>
+                            <h4>SMTP (Email)</h4>
+                        </div>
+                        <p>Utilisez TLS/SSL, configurez l'authentification, protégez-vous contre les attaques DoS et utilisez des antispam.</p>
+                    </div>
+                    <div class="protection-card dark-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🌐</span>
+                            <h4>HTTP (Web)</h4>
+                        </div>
+                        <p>Utilisez un proxy avec firewall DPI pour analyser le contenu et filtrer les sites malveillants.</p>
+                    </div>
+                    <div class="protection-card dark-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">🔑</span>
+                            <h4>Accès à distance</h4>
+                        </div>
+                        <p>N'autorisez que SSH et limitez les IP sources autorisées.</p>
+                    </div>
+                    <div class="protection-card dark-card">
+                        <div class="protection-header">
+                            <span class="protection-emoji">📁</span>
+                            <h4>Transfert de fichiers</h4>
+                        </div>
+                        <p>Privilégiez FTPS et restreignez les accès par adresse source dans le firewall.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="vpn-types">
+                <div class="section-header">
+                    <h2 class="section-title">VPN : Types et fonctionnement</h2>
+                    <p class="section-subtitle">Sécurisez vos connexions à distance</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🌐 VPN LAN-to-LAN</h3>
+                            <p>Connecte deux réseaux locaux distants (ex : deux bureaux d'une même entreprise) pour partager des ressources comme s'ils étaient sur le même réseau physique.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>💻 VPN Host-to-LAN</h3>
+                            <p>Permet à un télétravailleur d'accéder au réseau de l'entreprise depuis n'importe où, comme s'il était au bureau.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🔒 Fonctionnement du tunnel</h3>
+                            <p>Le VPN crée un tunnel virtuel sécurisé, authentifie les parties, garantit l'intégrité et chiffre les données pour empêcher toute interception.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Navigation vers formations avancées -->
+            <section class="content-section">
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Formation Avancée</h3>
+                        <p>Approfondissez avec des attaques sophistiquées : DoS/DDoS, MITM, Ransomware</p>
+                        <a href="cybersecurite-partie2.html" class="btn">Accéder à la Partie 2 →</a>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">📥</div>
+                        <h3>Ressources PDF</h3>
+                        <p>Guides de sécurité Wi-Fi et protection avancée</p>
+                        <a href="ressources.html" class="btn">Télécharger les PDFs</a>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🛠️</div>
+                        <h3>Mise en Pratique</h3>
+                        <p>Testez vos scripts de sécurité dans notre IDE</p>
+                        <a href="ide.html" class="btn">Ouvrir l'IDE</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Firewall et VPN -->
+            <section class="content-section" id="firewall-vpn">
+                <div class="section-header">
+                    <h2 class="section-title">🔥 Firewall et VPN : Sécurisation du Réseau</h2>
+                    <p class="section-subtitle">Outils essentiels pour protéger votre infrastructure réseau</p>
+                </div>
+
+                <!-- Qu'est-ce qu'un Firewall -->
+                <div class="attack-card">
+                    <div class="attack-icon">🏠</div>
+                    <h4>Qu'est-ce qu'un Firewall ?</h4>
+                    <div class="attack-details">
+                        <div class="detail-item">
+                            <strong>Votre porte vers Internet :</strong>
+                            <p>Le firewall est comme la porte de votre maison :<br>
+                            • Votre réseau privé correspond à votre maison<br>
+                            • Internet correspond à la rue<br>
+                            • Le firewall est la porte d'entrée qui contrôle qui peut entrer et sortir</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Principe de fonctionnement :</strong>
+                            <p>Tout comme vous ne laissez pas n'importe qui entrer chez vous, le firewall filtre le trafic réseau selon des règles prédéfinies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Types de Firewalls -->
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🖥️ Firewall Logiciel</h3>
+                            <p>Installé directement sur chaque ordinateur. Idéal pour les petites structures ou comme protection complémentaire.</p>
+                            <div class="card-tags">
+                                <span class="tag">Windows Defender</span>
+                                <span class="tag">Individuel</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Avantages :</strong> Facile à installer, économique<br>
+                                <strong>Inconvénients :</strong> Gestion individuelle, consommation ressources
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🔌 Firewall Matériel</h3>
+                            <p>Boîtier dédié placé entre votre réseau et Internet. Solution professionnelle pour protéger tout le réseau d'entreprise.</p>
+                            <div class="card-tags">
+                                <span class="tag">SonicWall</span>
+                                <span class="tag">Fortinet</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Avantages :</strong> Performance élevée, gestion centralisée<br>
+                                <strong>Inconvénients :</strong> Coût plus élevé, expertise requise
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>☁️ Firewall Cloud</h3>
+                            <p>Protection basée sur le cloud, idéale pour les entreprises avec plusieurs sites ou en télétravail.</p>
+                            <div class="card-tags">
+                                <span class="tag">Cloudflare</span>
+                                <span class="tag">Scalable</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Avantages :</strong> Évolutif, maintenance réduite<br>
+                                <strong>Inconvénients :</strong> Dépendance Internet, coût récurrent
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configuration des Règles -->
+                <div class="attack-card">
+                    <div class="attack-icon">⚖️</div>
+                    <h4>Configuration des Règles Firewall</h4>
+                    <div class="attack-details">
+                        <div class="detail-item">
+                            <strong>Principe du "Tout Interdit par Défaut" :</strong>
+                            <p>• Bloquer TOUT le trafic par défaut<br>
+                            • Autoriser uniquement ce qui est nécessaire<br>
+                            • Créer des exceptions spécifiques et documentées</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Exemples de règles courantes :</strong>
+                            <p>✅ Autoriser HTTP/HTTPS (ports 80/443) pour navigation web<br>
+                            ✅ Autoriser SMTP (port 25) pour emails sortants<br>
+                            ❌ Bloquer tous les autres ports non essentiels<br>
+                            ❌ Interdire P2P et téléchargements suspects</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Surveillance continue :</strong>
+                            <p>Examiner régulièrement les logs pour détecter tentatives d'intrusion et ajuster les règles.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section VPN -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">🌐 VPN (Virtual Private Network)</h2>
+                    <p class="section-subtitle">Créer un tunnel sécurisé pour vos communications</p>
+                </div>
+
+                <div class="attack-card">
+                    <div class="attack-icon">🔒</div>
+                    <h4>Principe du VPN</h4>
+                    <div class="attack-details">
+                        <div class="detail-item">
+                            <strong>Définition :</strong>
+                            <p>Un VPN crée un "tunnel" sécurisé et chiffré entre votre appareil et un serveur distant, masquant votre trafic Internet aux regards indiscrets.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Analogie simple :</strong>
+                            <p>Imaginez envoyer une lettre dans une enveloppe blindée et inviolable. Même si quelqu'un intercepte l'enveloppe, il ne peut pas lire le contenu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🏢 VPN Site-to-Site</h3>
+                            <p>Connecte deux réseaux d'entreprise distants de manière sécurisée. Idéal pour relier des bureaux.</p>
+                            <div class="card-tags">
+                                <span class="tag">Entreprise</span>
+                                <span class="tag">Multi-sites</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Usage :</strong> Relier bureau Paris et bureau Lyon comme s'ils étaient sur le même réseau local.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>💻 VPN Client-to-Site</h3>
+                            <p>Permet à un utilisateur distant de se connecter au réseau de l'entreprise. Essentiel pour le télétravail.</p>
+                            <div class="card-tags">
+                                <span class="tag">Télétravail</span>
+                                <span class="tag">Mobilité</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Usage :</strong> Employé en déplacement accédant aux serveurs de l'entreprise depuis son hôtel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🔐 VPN Personnel</h3>
+                            <p>Protection de la vie privée en ligne, anonymisation et contournement de restrictions géographiques.</p>
+                            <div class="card-tags">
+                                <span class="tag">Confidentialité</span>
+                                <span class="tag">Anonymat</span>
+                            </div>
+                            <div class="example-box">
+                                <strong>Usage :</strong> Navigation sécurisée sur Wi-Fi public, protection contre le tracking.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avantages VPN -->
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Chiffrement</h3>
+                        <p>Données cryptées impossibles à intercepter</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🎭</div>
+                        <h3>Anonymat</h3>
+                        <p>Masque votre véritable adresse IP</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Accès Distant</h3>
+                        <p>Connexion sécurisée depuis n'importe où</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🔒</div>
+                        <h3>Wi-Fi Public</h3>
+                        <p>Protection sur réseaux non sécurisés</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Zone DMZ -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">⚔️ Zone DMZ (DeMilitarized Zone)</h2>
+                    <p class="section-subtitle">Créer une zone tampon pour vos services publics</p>
+                </div>
+
+                <div class="attack-card">
+                    <div class="attack-icon">🛡️</div>
+                    <h4>Concept de la DMZ</h4>
+                    <div class="attack-details">
+                        <div class="detail-item">
+                            <strong>Définition :</strong>
+                            <p>Zone réseau isolée placée entre Internet et votre réseau interne privé. Elle héberge les services qui doivent être accessibles depuis l'extérieur.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Services typiques en DMZ :</strong>
+                            <p>🌐 Serveur web public<br>
+                            📧 Serveur mail<br>
+                            📁 Serveur FTP<br>
+                            🔍 Serveur DNS public</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Avantages sécuritaires :</strong>
+                            <p>• Si un service en DMZ est compromis, le réseau interne reste protégé<br>
+                            • Contrôle granulaire des flux entre zones<br>
+                            • Surveillance renforcée des services exposés<br>
+                            • Isolation des risques</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Analogie militaire :</strong>
+                            <p>Comme dans les accords de paix, la DMZ est une zone neutre où les interactions sont permises mais étroitement surveillées.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Mise en Pratique -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">🛠️ Mise en Pratique</h2>
+                    <p class="section-subtitle">Implémentation concrète d'une architecture sécurisée</p>
+                </div>
+
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">📋</div>
+                        <h3>Étape 1 : Audit</h3>
+                        <p>Analyser l'existant et identifier les vulnérabilités</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Étape 2 : Configuration</h3>
+                        <p>Installer et configurer firewall et VPN</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🧪</div>
+                        <h3>Étape 3 : Tests</h3>
+                        <p>Vérifier l'efficacité des mesures mises en place</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Étape 4 : Monitoring</h3>
+                        <p>Surveillance continue et ajustements</p>
+                    </div>
+                </div>
+
+                <div class="attack-card checklist-card">
+                    <div class="attack-icon">✅</div>
+                    <h4>Checklist de Sécurité Réseau</h4>
+                    <div class="attack-details">
+                        <div class="detail-item">
+                            <strong>Firewall :</strong>
+                            <p>✅ Règles "Deny All" par défaut<br>
+                            ✅ Ouverture ports nécessaires uniquement<br>
+                            ✅ Logs activés et surveillés<br>
+                            ✅ Mise à jour firmware régulière</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>VPN :</strong>
+                            <p>✅ Chiffrement fort (AES-256)<br>
+                            ✅ Authentification à deux facteurs<br>
+                            ✅ Certificats valides et à jour<br>
+                            ✅ Limitation des accès selon les besoins</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>DMZ :</strong>
+                            <p>✅ Services publics isolés<br>
+                            ✅ Surveillance renforcée<br>
+                            ✅ Sauvegardes régulières<br>
+                            ✅ Plan de continuité défini</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Logo et description -->
+            <div class="footer-section footer-brand">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo GretaBox" class="footer-logo">
+                <p class="footer-description">Plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.</p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+                    <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+                    <li><a href="montagepc.html">Montage PC</a></li>
+                    <li><a href="ide.html">IDE en ligne</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>Support technique</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>Lun - Ven : 9h - 18h</span>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="../assets/images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="../assets/images/x.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="../assets/images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="../assets/images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; <span id="current-year">2025</span> GRETABOX. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html">Mentions légales</a>
+                    <a href="contact.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

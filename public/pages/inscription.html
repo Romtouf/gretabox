@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - GRETABOX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="index.html" class="active">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="#">Reseaux LAN</a>
+                        <a href="#">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                    <div class="test2">
+                    </div>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Fin de la partie supériere de la page avec logo "GRETABOX" -->
+
+    <section class="inscription">
+            <h2>Inscription</h2>
+                        <form action="inscription.html" method="POST">
+                            <label for="name">Nom complet:</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+        
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+        
+                        
+                            <label for="password">Mot de passe:</label>
+                            <input type="password" id="password" name="password" required>
+                            <span class="error-message" id="password-error"></span>
+        
+                            
+                            <button type="submit" class="btn active">S'inscrire</button>
+        
+                            <div class="inscription-info">
+                                <p>En vous inscrivant, vous acceptez nos <a href="terms.html">conditions d'utilisation</a> et notre <a href="privacy.html">politique de confidentialité</a>.</p>
+                            </div>
+                        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p class="clik">Email: contact@gretabox.com</p>
+                <p>© 2025 GRETABOX. Tous droits réservés.</p>
+            </div>
+
+            <div class="social-links">
+                <h3>Suivez-nous</h3>
+                <div class="sociale-icons">
+                                        <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/" target="_blank"><img src="../assets/images/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.x.com/" target="_blank"><img src="../assets/images/x.svg" alt="X"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

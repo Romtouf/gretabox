@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersécurité - Partie 2 - GretaBox</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="../assets/images/Logo_GRETABOX-removebg-preview.png"
+            alt="Logo de GRETABOX"
+            class="logo"
+          />
+        </div>
+        <nav class="header-nav">
+          <ul class="nav-left">
+            <li><a href="../../index.html">Accueil</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Formations</button>
+              <div class="dropdown-content">
+                <a href="cybersecuriter.html" class="active">Cybersécurité</a>
+                <a href="reseauxlan.html">Reseaux LAN</a>
+                <a href="montagepc.html">Monter un PC</a>
+              </div>
+            </div>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ide.html">IDE</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="cybersecurity-page">
+      <div class="hero-section">
+        <div class="container">
+          <h1 class="page-title">Cybersécurité - Partie 2</h1>
+          <p class="page-subtitle">
+            Attaques Avancées et Défenses Sophistiquées
+          </p>
+          <div class="intro-text">
+            <p>
+              Approfondissons notre analyse des cyberattaques modernes. Cette
+              section explore les techniques d'attaque les plus sophistiquées et
+              les méthodes de défense appropriées pour se protéger efficacement.
+            </p>
+            <div class="navigation-links">
+              <a href="cybersecuriter.html" class="btn">← Retour Partie 1</a>
+              <a href="#sommaire" class="btn">📋 Sommaire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Sommaire -->
+        <section class="content-section" id="sommaire">
+          <div class="section-header">
+            <h2 class="section-title">📋 Sommaire - Partie 2</h2>
+            <p class="section-subtitle">
+              Navigation rapide vers les différentes sections
+            </p>
+          </div>
+
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">⚡</div>
+              <h3>DoS/DDoS</h3>
+              <p>Attaques par déni de service distribué</p>
+              <a href="#dos-ddos" class="btn">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🕵️</div>
+              <h3>Man In The Middle</h3>
+              <p>Interception et manipulation des communications</p>
+              <a href="#mitm" class="btn">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🎣</div>
+              <h3>Phishing Avancé</h3>
+              <p>Techniques d'hameçonnage sophistiquées</p>
+              <a href="#phishing" class="btn">Aller à la section</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🔒</div>
+              <h3>Ransomware</h3>
+              <p>Logiciels de rançon et études de cas</p>
+              <a href="#ransomware" class="btn">Aller à la section</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section DoS/DDoS -->
+        <section class="content-section" id="dos-ddos">
+          <div class="section-header">
+            <h2 class="section-title">⚡ Attaques DoS/DDoS</h2>
+            <p class="section-subtitle">
+              Comprendre et se défendre contre les attaques par déni de service
+            </p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">⚡</div>
+            <h4>Qu'est-ce qu'une attaque DoS/DDoS ?</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>DoS (Denial of Service) :</strong>
+                <p>
+                  Une attaque qui vise à rendre un service indisponible en le
+                  saturant de requêtes depuis un seul point d'origine.
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>DDoS (Distributed Denial of Service) :</strong>
+                <p>
+                  Version amplifiée utilisant des milliers d'ordinateurs
+                  infectés (botnet) pour attaquer simultanément une cible.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 3.png"
+                  alt="Schéma attaque DoS/DDoS"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Impact :</strong>
+                <p>
+                  🔴 Site web totalement inaccessible<br />
+                  💰 Perte de revenus massive<br />
+                  📉 Réputation ternie<br />
+                  ⏰ Perturbation pouvant durer des jours
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Conclusion :</strong>
+                <p>
+                  • Les attaques DoS/DDoS sont
+                  <strong>fréquentes et redoutables</strong><br />
+                  • Elles touchent aussi bien grandes entreprises que PME<br />
+                  • La
+                  <strong
+                    >préparation, détection précoce et réaction rapide</strong
+                  >
+                  sont essentielles
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section MITM -->
+        <section class="content-section" id="mitm">
+          <div class="section-header">
+            <h2 class="section-title">🕵️ Attaques Man In The Middle (MITM)</h2>
+            <p class="section-subtitle">L'art de l'espionnage numérique</p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🕵️</div>
+            <h4>Technique d'Interception</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Principe :</strong>
+                <p>
+                  L'attaquant s'intercale secrètement entre deux parties
+                  communicantes, pouvant écouter, modifier ou voler toutes les
+                  données échangées.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 4.png"
+                  alt="Schéma attaque MITM"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Exemple concret - Faux Wi-Fi :</strong>
+                <p>
+                  Un pirate crée un point d'accès "Starbucks_Free" dans un café.
+                  Les victimes s'y connectent pensant utiliser le Wi-Fi gratuit,
+                  mais toutes leurs données passent par l'ordinateur du pirate.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 5.png"
+                  alt="Vol d'identifiants via MITM"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Conséquences :</strong>
+                <p>
+                  🔑 Vol d'identifiants de connexion<br />
+                  💳 Interception données bancaires<br />
+                  📧 Lecture d'emails privés<br />
+                  🏢 Accès aux systèmes d'entreprise
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Conclusion :</strong>
+                <p>
+                  • Les attaques MITM sont
+                  <strong>discrètes mais très dangereuses</strong><br />
+                  • Elles ciblent particuliers et entreprises<br />
+                  • <strong>Prévention, formation et chiffrement</strong> sont
+                  les meilleures armes
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Phishing Avancé -->
+        <section class="content-section" id="phishing">
+          <div class="section-header">
+            <h2 class="section-title">🎣 Phishing Avancé</h2>
+            <p class="section-subtitle">
+              Au-delà des emails basiques : l'hameçonnage sophistiqué
+            </p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🎣</div>
+            <h4>Évolution du Phishing</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Définition rappel :</strong>
+                <p>
+                  <strong>Phishing = hameçonnage</strong><br />
+                  Technique de fraude visant à
+                  <strong
+                    >tromper une victime pour qu'elle divulgue des informations
+                    sensibles</strong
+                  >
+                  (mots de passe, numéros de carte bancaire...)<br />
+                  Le cybercriminel
+                  <strong>se fait passer pour une entité de confiance</strong>
+                  (banque, administration, entreprise...)
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 6.png"
+                  alt="Techniques de phishing modernes"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Conséquences graves :</strong>
+                <p>
+                  <strong>• Vol d'identifiants →</strong> Accès comptes
+                  personnels/professionnels<br />
+                  <strong>• Vol d'argent :</strong> Fraude bancaire directe<br />
+                  <strong>• Rançongiciels</strong> via pièces jointes piégées<br />
+                  <strong>• Atteinte réputation</strong> si l'attaque touche une
+                  entreprise
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 7.png"
+                  alt="6 étapes de protection anti-phishing"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Exemple d'attaque célèbre :</strong>
+                <p>
+                  Fausse relance de <strong>paiement EDF</strong> ou impôts avec
+                  sites web parfaitement imités.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 8.png"
+                  alt="Fausse relance EDF/impôts"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Conclusion :</strong>
+                <p>
+                  • Le phishing est <strong>fréquent et rentable</strong> pour
+                  les cybercriminels<br />
+                  • Il peut viser <strong>tout le monde</strong>, personnel ou
+                  professionnel<br />
+                  • <strong>Prévention, vigilance et formation</strong> sont les
+                  meilleurs remparts
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Ransomware -->
+        <section class="content-section" id="ransomware">
+          <div class="section-header">
+            <h2 class="section-title">🔒 Ransomware : La Menace Paralysante</h2>
+            <p class="section-subtitle">
+              Comprendre et se protéger contre les logiciels de rançon
+            </p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🔒</div>
+            <h4>Mécanisme du Ransomware</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Fonctionnement :</strong>
+                <p>
+                  Le ransomware chiffre (verrouille) tous vos fichiers et
+                  demande une rançon (souvent en Bitcoin) pour les déchiffrer.
+                  C'est l'une des attaques les plus destructrices car elle
+                  paralyse complètement l'activité.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 9.png"
+                  alt="Interface typique de ransomware"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 10.png"
+                  alt="Cycle d'infection ransomware"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Cas emblématique - WannaCry (2017) :</strong>
+                <p>
+                  En mai 2017, WannaCry a infecté plus de
+                  <strong>300 000 ordinateurs dans 150 pays</strong>, paralysant
+                  hôpitaux, entreprises et services publics. Un exemple parfait
+                  de l'impact dévastateur possible.
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 11.png"
+                  alt="Impact mondial de WannaCry"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Cibles privilégiées :</strong>
+                <p>
+                  🏥 Hôpitaux et cliniques<br />
+                  🏭 Entreprises industrielles<br />
+                  🏛️ Collectivités territoriales<br />
+                  🎓 Établissements scolaires<br />
+                  💼 PME avec sécurité faible
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Conclusion :</strong>
+                <p>
+                  • Les ransomwares sont
+                  <strong>parmi les attaques les plus destructrices</strong
+                  ><br />
+                  • Ils visent
+                  <strong
+                    >entreprises, institutions, hôpitaux, collectivités</strong
+                  ><br />
+                  • <strong>Prévention, sauvegardes et formation</strong> sont
+                  les piliers de protection
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Trojans -->
+        <section class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">🐴 Trojans : L'Art du Déguisement</h2>
+            <p class="section-subtitle">
+              Chevaux de Troie modernes et techniques de dissimulation
+            </p>
+          </div>
+
+          <div class="attack-card">
+            <div class="attack-icon">🐴</div>
+            <h4>Sophistication des Trojans</h4>
+            <div class="attack-details">
+              <div class="detail-item">
+                <strong>Définition :</strong>
+                <p>
+                  Un <strong>Trojan</strong> ou
+                  <strong>Cheval de Troie</strong> est un malware qui se déguise
+                  en programme légitime pour tromper l'utilisateur. Une fois
+                  installé, il ouvre une porte dérobée pour l'attaquant.
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Caractéristiques :</strong>
+                <p>
+                  • <strong>Discrétion :</strong> Se cache dans un fichier
+                  apparemment inoffensif<br />
+                  • <strong>Accès distant :</strong> Permet aux attaquants
+                  d'accéder au système à distance<br />
+                  • <strong>Persistance :</strong> Difficile à détecter et
+                  supprimer<br />
+                  • <strong>Évolutif :</strong> Peut télécharger d'autres
+                  malwares
+                </p>
+              </div>
+              <div class="attack-image-container">
+                <img
+                  src="../assets/images/Image 12.png"
+                  alt="Chaîne d'infection d'un Trojan Stealer"
+                  class="attack-diagram"
+                />
+              </div>
+              <div class="detail-item">
+                <strong>Conséquences :</strong>
+                <p>
+                  • <strong>Vol de données sensibles :</strong> Informations
+                  personnelles, bancaires, d'entreprise<br />
+                  • <strong>Accès distant non autorisé :</strong> Contrôle total
+                  de l'ordinateur<br />
+                  • <strong>Espionnage :</strong> Surveillance activité, webcam,
+                  microphone<br />
+                  • <strong>Exploitation DDoS :</strong> Utilisation pour
+                  attaquer d'autres cibles<br />
+                  • <strong>Vol d'identifiants :</strong> Accès comptes en ligne
+                  et emails
+                </p>
+              </div>
+              <div class="detail-item">
+                <strong>Protection recommandée :</strong>
+                <p>
+                  🔍 Antivirus professionnel à jour<br />
+                  📊 Surveillance activité réseau<br />
+                  🚨 Vigilance sur programmes inconnus<br />
+                  🔒 Principe de moindre privilège<br />
+                  🎓 Formation utilisateurs
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Ressources Complémentaires -->
+        <section class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">📚 Pour Aller Plus Loin</h2>
+            <p class="section-subtitle">
+              Ressources complémentaires et outils pratiques
+            </p>
+          </div>
+
+          <div class="importance-grid">
+            <div class="importance-card">
+              <div class="card-icon">📥</div>
+              <h3>Guides PDF Spécialisés</h3>
+              <p>
+                Documentation approfondie sur la sécurité Wi-Fi et l'accès
+                distant
+              </p>
+              <a href="ressources.html" class="btn">Télécharger les PDFs</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🛠️</div>
+              <h3>IDE de Test</h3>
+              <p>Testez vos scripts de sécurité et configurations</p>
+              <a href="ide.html" class="btn">Ouvrir l'IDE</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🌐</div>
+              <h3>Formations Réseaux</h3>
+              <p>
+                Approfondissez la sécurité réseau avec nos autres formations
+              </p>
+              <a href="reseauxlan.html" class="btn">Formation Réseaux LAN</a>
+            </div>
+            <div class="importance-card">
+              <div class="card-icon">🔄</div>
+              <h3>Retour Partie 1</h3>
+              <p>Revisiter les bases de la cybersécurité</p>
+              <a href="cybersecuriter.html" class="btn">← Partie 1</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Debut du Footer-->
+    <footer class="modern-footer">
+      <div class="footer-container">
+        <!-- Logo et description -->
+        <div class="footer-section footer-brand">
+          <img
+            src="../assets/images/Logo_GRETABOX-removebg-preview.png"
+            alt="Logo GretaBox"
+            class="footer-logo"
+          />
+          <p class="footer-description">
+            Plateforme pédagogique interactive dédiée à l'apprentissage de
+            l'informatique et des technologies numériques.
+          </p>
+        </div>
+
+        <!-- Liens rapides -->
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+            <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+            <li><a href="montagepc.html">Montage PC</a></li>
+            <li><a href="ide.html">IDE en ligne</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>Support technique</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕒</span>
+            <span>Lun - Ven : 9h - 18h</span>
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="../assets/images/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <img src="../assets/images/x.svg" alt="Twitter" />
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <img src="../assets/images/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <img src="../assets/images/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <p>
+            &copy; <span id="current-year">2025</span> GRETABOX. Tous droits
+            réservés.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="contact.html">Mentions légales</a>
+            <a href="contact.html">Politique de confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Fin du footer-->
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script2.js" defer></script>
+    <!-- Version Netlify Functions - pas de clé API côté client -->
+    <script src="../assets/js/gretix-netlify.js" defer></script>
+    <title>GretaBox - Plateforme pédagogique informatique</title>
+</head>
+<body>
+    <!--Debut du Header-->
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="index.html" class="active">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="reseauxlan.html">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                <div class="test2">
+                </div>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Fin du Header-->
+<!--Cartes de présentations des tutos- Washo -->
+<div class="card-container">
+    <h1>Bienvenue sur GretaBox</h1>
+    <p>Une plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.
+    Il propose une série de tutoriels pratiques abordant divers sujets comme la cybersécurité, le montage de PC ou encore le réseau LAN. Chaque tutoriel est conçu pour être accessible et formateur, permettant aux utilisateurs de développer leurs compétences à leur rythme. En plus des contenus éducatifs, GretaBox met à disposition un IDE (environnement de développement intégré) en ligne, accessible directement depuis le navigateur, pour coder en toute simplicité sans avoir à installer de logiciel. Le site s'adresse particulièrement aux apprenants et formateurs cherchant un outil centralisé et intuitif pour l'apprentissage technique.</p>
+    <h2>Nos tutoriels</h2>
+    <!--Carousel-->
+    <div class="carousel">
+        <button class="arrow_left">&#8592;</button>
+        <img class="banner-img" src="" alt="Image du carrousel">
+        <button class="arrow_right">&#10230;</button>
+        <div class="bullets"></div>
+    </div>
+    <div class="card">
+        <img src="" alt="Tuto 1">
+        <h3>Tutoriel 1</h3>
+        <p>Tuto sur la cybersécurité ou je sais pas quoi </p>
+        <a href="formation.html" class="btn">Voir le tutoriel</a>
+    </div>
+    <div class="card">
+        <img src="" alt="Tuto 2">
+        <h3>Tutoriel 2</h3>
+        <p>Tuto sur le montage de pc </p>
+        <a href="formation.html" class="btn">Voir le tutoriel</a>
+    </div>
+    <div class="card">
+        <img src="" alt="Tuto 3">
+        <h3>Tutoriel 3</h3>
+        <p>Tuto sur le reseau LAN </p>
+        <a href="formation.html" class="btn">Voir le tutoriel</a>
+    </div>
+</div>
+<!--Fin des cartes de présentations des tutos-->
+<!--Debut de la section IDE-Washo -->
+<div class="text-ide">
+    <h2>Découvrez notre IDE en ligne</h2>
+</div>
+<div class="ide-container">
+    <div class="card">
+        <h3>IDE en ligne</h3>
+        <p>Accédez à notre IDE en ligne pour coder directement depuis votre navigateur.</p>
+        <a href="ide.html" class="btn">Accéder à l'IDE</a>
+    </div>
+</div>
+
+    <!--Debut du Footer-->
+    <footer class="footer">
+            <div class="social-media">
+                <h2>Suivez-nous</h2>
+                <a href="#"><img src="../assets/images/facebook.svg" alt="Facebook" class="icon"></a>
+                <a href="#"><img src="../assets/images/x.svg" alt="Twitter" class="icon"></a>
+                <a href="#"><img src="../assets/images/instagram.svg" alt="Instagram" class="icon"></a>
+                <a href="#"><img src="../assets/images/linkedin.svg" alt="LinkedIn" class="icon"></a>
+                
+            </div>
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Email: contact@gretabox.com <a href="https://www.gretabox.com/contact">Contact Us</a></p>
+                <a href="mailto:contact@gretabox.com" class="email-link">Envoyer un email</a>
+                <p>&copy; <span id="current-year"></span> GRETABOX. Tous droits réservés.</p>
+            </div>
+                    <img src="../assets/images/gretix.webp" class="bot" alt="image du bot" id="gretix-bot">
+        <img src="../assets/images/bulle.webp" alt="Image de la bulle" class="bulle">
+    </footer>
+
+    <!-- Modale du Chatbot Gretix -->
+    <div id="gretix-modal" class="gretix-modal">
+        <div class="gretix-modal-content">
+            <div class="gretix-header">
+                <img src="../assets/images/gretix.webp" alt="Gretix" class="gretix-avatar">
+                <h3>Gretix - Assistant GretaBox</h3>
+                <span class="gretix-close">&times;</span>
+            </div>
+            <div class="gretix-chat-container" id="gretix-chat">
+                <div class="gretix-message gretix-bot-message">
+                    <div class="gretix-message-content">
+                        Bonjour ! Je suis Gretix, votre assistant virtuel GretaBox. Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+            </div>
+            <div class="gretix-input-container">
+                <input type="text" id="gretix-input" placeholder="Tapez votre message..." autocomplete="off">
+                <button id="gretix-send">Envoyer</button>
+            </div>
+        </div>
+    </div>
+    <!--Fin du footer-->
+</body>
+</html> 

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Éditeur de Code HTML/CSS/JS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/libs/codemirror.css">
+    <link rel="stylesheet" href="../assets/css/ide.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>           
+            <nav class="header-nav">
+                <ul class="nav-left">
+                    <li><a href="../../index.html">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="reseauxlan.html">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html" class="active">IDE</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                <div class="test2">
+                </div>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- CodeMirror CSS local -->
+    <!-- Thèmes CodeMirror locaux -->
+    <link rel="stylesheet" href="../assets/libs/theme/material.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/dracula.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/eclipse.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/monokai.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/solarized.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/tomorrow-night-bright.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/vibrant-ink.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/zenburn.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/oceanic-next.css" />
+    <link rel="stylesheet" href="../assets/libs/theme/nord.css" />
+    <div class="container">
+    <section class="editeur-titre">
+        <h1 id="app-title">Éditeur de Code HTML/CSS/JS</h1>
+        <div class="controls">
+        <label for="theme-selector" id="theme-label" >Choisir le Thème :</label>
+        <select id="theme-selector">
+            <optgroup label="🌟 Populaires">
+                <option value="material">Material</option>
+                <option value="dracula">Dracula</option>
+                <option value="monokai">Monokai</option>
+                <option value="solarized">Solarized</option>
+                <option value="eclipse">Eclipse</option>
+            </optgroup>
+            <optgroup label="🌙 Sombres">
+                <option value="tomorrow-night-bright">Tomorrow Night</option>
+                <option value="vibrant-ink">Vibrant Ink</option>
+                <option value="zenburn">Zenburn</option>
+                <option value="oceanic-next">Oceanic Next</option>
+                <option value="nord">Nord</option>
+                <option value="midnight">Midnight</option>
+                <option value="darcula">Darcula</option>
+                <option value="gruvbox-dark">Gruvbox Dark</option>
+            </optgroup>
+            <optgroup label="☀️ Clairs">
+                <option value="neo">Neo</option>
+                <option value="elegant">Elegant</option>
+                <option value="neat">Neat</option>
+                <option value="3024-day">3024 Day</option>
+                <option value="paraiso-light">Paraiso Light</option>
+            </optgroup>
+            <optgroup label="🎨 Colorés">
+                <option value="panda-syntax">Panda</option>
+                <option value="the-matrix">Matrix</option>
+                <option value="cobalt">Cobalt</option>
+                <option value="twilight">Twilight</option>
+                <option value="ambiance">Ambiance</option>
+            </optgroup>
+        </select>
+        <label for="dark-mode-toggle" id="dark-mode-label">Mode Sombre</label>
+        <input type="checkbox" id="dark-mode-toggle" />
+    </div>
+    </section>
+
+    <main class="main-ide">
+        <div class="editor-container">
+            <div class="editor-pane" id="html-pane">
+                <h2>HTML</h2>
+                <textarea id="html-editor"></textarea>
+            </div>
+            <div class="editor-pane" id="css-pane">
+                <h2>CSS</h2>
+                <textarea id="css-editor"></textarea>
+            </div>
+            <div class="editor-pane" id="js-pane">
+                <h2>JavaScript</h2>
+                <textarea id="js-editor"></textarea>
+            </div>
+        </div>
+            <button id="run-btn">Exécuter</button>
+        <div class="output-container">
+            <h2>Résultat</h2>
+            <iframe class="outputframe"id="output-frame"></iframe>
+        </div>
+    </main>
+    </div>
+    <!--Debut du Footer-->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Logo et description -->
+            <div class="footer-section footer-brand">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo GretaBox" class="footer-logo">
+                <p class="footer-description">Plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.</p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+                    <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+                    <li><a href="montagepc.html">Montage PC</a></li>
+                    <li><a href="ide.html">IDE en ligne</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>Support technique</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>Lun - Ven : 9h - 18h</span>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="../assets/images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="../assets/images/x.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="../assets/images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="../assets/images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; <span id="current-year">2025</span> GRETABOX. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html">Mentions légales</a>
+                    <a href="contact.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Fin du footer-->
+    <!-- CodeMirror JS local -->
+    <script src="../assets/libs/codemirror.js"></script>
+    <script src="../assets/libs/mode/javascript/javascript.js"></script>
+    <script src="../assets/libs/mode/css/css.js"></script>
+    <script src="../assets/libs/mode/xml/xml.js"></script>
+
+    <!-- Scripts de l'application -->
+    <script src="../../config/env-simple.js"></script>
+    <script src="../../config/config.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/gretix.js" defer></script>
+</body>
+</html>

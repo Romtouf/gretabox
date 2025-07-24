@@ -1,0 +1,27 @@
+{
+  "name": "gretabox-chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot Gretix pour GretaBox avec backend sécurisé",
+  "main": "server.js",
+  "scripts": {
+    "start": "node start-server.js",
+    "dev": "nodemon start-server.js",
+    "build-env": "node config/env-to-js.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "chatbot",
+    "openrouter",
+    "express",
+    "gretabox"
+  ],
+  "author": "GretaBox Team",
+  "license": "MIT"
+}

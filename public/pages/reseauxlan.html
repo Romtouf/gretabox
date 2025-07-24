@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de tutoriels sur le Reseau Local Informatique</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+        <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo de GRETABOX" class="logo">
+            </div>            <nav class="header-nav">
+                                <ul class="nav-left">
+                <li><a href="../../index.html">Accueil</a> </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Formations</button>
+                    <div class="dropdown-content">
+                        <a href="cybersecuriter.html">Cybersécurité</a>
+                        <a href="reseauxlan.html" class="active">Reseaux LAN</a>
+                        <a href="montagepc.html">Monter un PC</a>
+                    </div>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ide.html">IDE</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                </div>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="cybersecurity-page">
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="page-title">Plan de tutoriels sur le Reseau Local Informatique</h1>
+                <div class="intro-text">
+                    <p>
+                        Bienvenue dans cette série de tutoriels. Elle est conçue pour vous
+                        initier aux réseaux locaux (LAN). Nous allons explorer la
+                        configuration et le dépannage des réseaux.
+                        <br>
+                        Que vous soyez débutant, étudiant, ou professionnel de l'IT, ces
+                        tutoriels vous fourniront les compétences essentielles pour
+                        maîtriser les réseaux locaux.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Section Introduction -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">I. Concepts Fondamentaux des Réseaux Locaux</h2>
+                    <p class="section-subtitle">Pour bien comprendre les réseaux locaux, il faut connaître les bases.</p>
+                </div>
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Adresses IP</h3>
+                        <p>IPv4 vs IPv6</p>
+                        <p>Masques de sous-réseau</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Protocoles réseau</h3>
+                        <p>TCP/IP, UDP, DNS, DHCP</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">💰</div>
+                        <h3>Topologies</h3>
+                        <p>Étoile, Anneau, Bus, maillée</p>
+                    </div>
+                    <div class="importance-card">
+                        <div class="card-icon">🤝</div>
+                        <h3>Réputation</h3>
+                        <p>Maintenir la confiance des clients et des partenaires.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="../assets/pdf/Comprendre-les-Reseaux-Informatiques.pdf"
+                    download="Comprendre-les-Reseaux-Informatiques.pdf" class="btn-section">📥 Télécharger le PDF (843 KB)
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Matériel Réseau -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">🏭 Matériel et Équipements Réseau</h2>
+                <p class="section-subtitle">Comprendre et choisir les bons équipements pour votre infrastructure</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🔌 Switches et Hubs</h3>
+                        <p>Équipements de connexion permettant de relier plusieurs appareils dans un réseau local. Le switch est plus intelligent que le hub.</p>
+                        <div class="card-tags">
+                            <span class="tag">Switch</span>
+                            <span class="tag">Connectivité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📡 Routeurs</h3>
+                        <p>Dispositifs qui dirigent le trafic entre différents réseaux, notamment vers Internet. Essentiels pour la connectivité WAN.</p>
+                        <div class="card-tags">
+                            <span class="tag">Routage</span>
+                            <span class="tag">Internet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📶 Points d'Accès Wi-Fi</h3>
+                        <p>Étendent la connectivité réseau sans fil. Configuration et sécurisation essentielles pour un réseau d'entreprise.</p>
+                        <div class="card-tags">
+                            <span class="tag">Wi-Fi</span>
+                            <span class="tag">Sans fil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="importance-grid">
+                <div class="importance-card">
+                    <div class="card-icon">📖</div>
+                    <h3>Guide Complet</h3>
+                    <p>Documentation détaillée sur tous les équipements réseau</p>
+                    <a href="../assets/pdf/Materiel-de-Reseau-Informatique.pdf" class="btn-section" download>📥 Télécharger (533 KB)</a>
+                </div>
+                <div class="importance-card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Installation Routeur</h3>
+                    <p>Guide pas-à-pas pour installer un routeur sans fil</p>
+                    <a href="../assets/pdf/Installation-dun-Routeur-Sans-Fil-1.pdf" class="btn-section" download>📥 Télécharger (1.1 MB)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Adressage IP -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">🌐 Adressage IP et Sous-réseaux</h2>
+                <p class="section-subtitle">Maîtriser l'attribution et la gestion des adresses IP</p>
+            </div>
+
+            <div class="attack-card">
+                <div class="attack-icon">🔢</div>
+                <h4>IPv4 vs IPv6</h4>
+                <div class="attack-details">
+                    <div class="detail-item">
+                        <strong>IPv4 :</strong>
+                        <p>Format traditionnel (ex: 192.168.1.1). Limité à environ 4 milliards d'adresses uniques.</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>IPv6 :</strong>
+                        <p>Nouveau format (ex: 2001:0db8:85a3::8a2e:0370:7334). Pratiquement illimité en adresses.</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Sous-réseaux :</strong>
+                        <p>Division d'un réseau en segments plus petits pour une meilleure organisation et sécurité.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="importance-grid-new">
+                <div class="importance-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Formation Adresses IP</h3>
+                    <p>Guide complet IPv4/IPv6 et sous-réseaux</p>
+                    <a href="../assets/pdf/Introduction-aux-Adresses-IP.pdf" class="btn-section" download>📥 Télécharger (4.4 MB)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Partage et Services -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">🤝 Partage de Ressources</h2>
+                <p class="section-subtitle">Configurer le partage de fichiers et d'imprimantes</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📁 Partage de Fichiers</h3>
+                        <p>Configuration du partage sécurisé entre Windows, Linux et macOS sur le réseau local.</p>
+                        <div class="card-tags">
+                            <span class="tag">SMB/CIFS</span>
+                            <span class="tag">Multi-OS</span>
+                        </div>
+                        <a href="../assets/pdf/Partage-de-Fichiers-Entre-Systemes-1.pdf" class="btn" download>📥 Guide PDF (961 KB)</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🖨️ Partage d'Imprimantes</h3>
+                        <p>Installation, configuration et dépannage des imprimantes partagées.</p>
+                        <div class="card-tags">
+                            <span class="tag">Impression</span>
+                            <span class="tag">Réseau</span>
+                        </div>
+                        <a href="../assets/pdf/Faciliter-lImpression-Guide-du-Partage-dImprimantes.pdf" class="btn" download>📥 Guide PDF (586 KB)</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🌍 Accès Distant</h3>
+                        <p>Solutions VPN et accès à distance sécurisé pour travailler depuis l'extérieur.</p>
+                        <div class="card-tags">
+                            <span class="tag">VPN</span>
+                            <span class="tag">Télétravail</span>
+                        </div>
+                        <a href="../assets/pdf/Acces-a-Distance-Solutions-et-Pratiques.pdf" class="btn" download>📥 Guide PDF (921 KB)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Diagnostic et Dépannage -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">🔧 Diagnostic et Résolution de Problèmes</h2>
+                <p class="section-subtitle">Méthodologies pour identifier et résoudre les pannes réseau</p>
+            </div>
+
+            <div class="attack-card">
+                <div class="attack-icon">🔍</div>
+                <h4>Outils de Diagnostic</h4>
+                <div class="attack-details">
+                    <div class="detail-item">
+                        <strong>Commandes de base :</strong>
+                        <p>• <code>ping</code> : Tester la connectivité<br>
+                        • <code>ipconfig/ifconfig</code> : Configuration IP<br>
+                        • <code>tracert/traceroute</code> : Tracer le chemin réseau<br>
+                        • <code>nslookup</code> : Résolution DNS</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Problèmes courants :</strong>
+                        <p>• Pas de connectivité Internet<br>
+                        • Lenteur réseau<br>
+                        • Problèmes DNS<br>
+                        • Conflits d'adresses IP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="importance-grid-new">
+                <div class="importance-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Guide Complet</h3>
+                    <p>Méthodologies et outils de diagnostic réseau</p>
+                    <a href="../assets/pdf/Diagnostic-et-Resolution-de-Problemes-Reseau.pdf" class="btn-section" download>📥 Télécharger (950 KB)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Logo et description -->
+            <div class="footer-section footer-brand">
+                <img src="../assets/images/Logo_GRETABOX-removebg-preview.png" alt="Logo GretaBox" class="footer-logo">
+                <p class="footer-description">Plateforme pédagogique interactive dédiée à l'apprentissage de l'informatique et des technologies numériques.</p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="cybersecuriter.html">Cybersécurité</a></li>
+                    <li><a href="reseauxlan.html">Réseaux LAN</a></li>
+                    <li><a href="montagepc.html">Montage PC</a></li>
+                    <li><a href="ide.html">IDE en ligne</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:contact@gretabox.com">contact@gretabox.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>Support technique</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>Lun - Ven : 9h - 18h</span>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="../assets/images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="../assets/images/x.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="../assets/images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="../assets/images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; <span id="current-year">2025</span> GRETABOX. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html">Mentions légales</a>
+                    <a href="contact.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

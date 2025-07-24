@@ -1,0 +1,676 @@
+/* CSS dédié à l'IDE GretaBox */
+
+/* Variables CSS pour les thèmes */
+:root {
+  --primary-color: #21776e;
+  --secondary-color: #f9b746;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --border-color: #ddd;
+  --dark-bg: #1e1e1e;
+  --dark-text: #ffffff;
+}
+
+/* Conteneur principal de l'IDE - Priorité haute pour surcharger styles.css */
+body .container {
+  max-width: 99% !important;
+  margin: 0 10% !important;
+  padding: 5px 2px !important;
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+/* Section titre de l'éditeur */
+.editeur-titre {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.editeur-titre h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+/* Contrôles (thème et mode sombre) */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.controls select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.controls select option {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.controls input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 0 5px;
+}
+
+/* Conteneur principal de l'IDE */
+.main-ide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Conteneur des éditeurs */
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Panneaux d'éditeur */
+.editor-pane {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  min-height: 400px;
+}
+
+/* Disposition spécifique des éditeurs */
+#html-pane {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#css-pane {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#js-pane {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-height: 300px;
+}
+
+.editor-pane h2 {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* Éditeurs CodeMirror */
+.CodeMirror {
+  height: 300px !important;
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #ddd;
+}
+
+.CodeMirror-scroll {
+  min-height: 300px;
+}
+
+/* Bouton d'exécution */
+#run-btn {
+  align-self: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(33, 119, 110, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+
+#run-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 119, 110, 0.4);
+}
+
+#run-btn:active {
+  transform: translateY(0);
+}
+
+/* Conteneur de sortie */
+.output-container {
+  margin-top: 20px;
+}
+
+.output-container h2 {
+  margin: 0 0 15px 0;
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* iFrame de résultat */
+.outputframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Thèmes CodeMirror personnalisés */
+
+/* Thème Material */
+.theme-material .CodeMirror {
+  background-color: #263238 !important;
+  color: #eeffff !important;
+}
+
+.theme-material .CodeMirror-gutters {
+  background-color: #37474f !important;
+  border-right: 1px solid #37474f;
+}
+
+/* Thème Dracula */
+.theme-dracula .CodeMirror {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+.theme-dracula .CodeMirror-gutters {
+  background-color: #44475a !important;
+  border-right: 1px solid #44475a;
+}
+
+/* Thème Eclipse */
+.theme-eclipse .CodeMirror {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-eclipse .CodeMirror-gutters {
+  background-color: #f7f7f7 !important;
+  border-right: 1px solid #cccccc;
+}
+
+/* Mode sombre */
+.dark-mode {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+
+.dark-mode .container {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.dark-mode .main-ide {
+  background-color: #2d2d2d;
+  color: var(--dark-text);
+}
+
+.dark-mode .editor-pane {
+  background-color: #3d3d3d;
+}
+
+.dark-mode .output-container h2 {
+  background: linear-gradient(135deg, #444, #666);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .editor-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .editor-pane {
+    min-height: 280px;
+  }
+
+  #js-pane {
+    min-height: 220px;
+  }
+
+  .CodeMirror {
+    height: 200px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Optimisation pour très petits écrans */
+@media screen and (max-width: 480px) {
+  body .container {
+    padding: 2px 1px !important;
+    max-width: 100% !important;
+  }
+
+  .main-ide {
+    padding: 5px 2px !important;
+    gap: 8px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .editeur-titre {
+    padding: 8px 3px;
+    margin-bottom: 8px;
+  }
+
+  .editor-container {
+    gap: 3px;
+    margin-bottom: 5px;
+    padding: 0 1px;
+  }
+
+  .editor-pane {
+    margin-bottom: 8px;
+  }
+
+  .CodeMirror {
+    font-size: 15px !important;
+  }
+
+  .editor-pane h2 {
+    font-size: 1.3em;
+  }
+
+  .output-container h2 {
+    font-size: 1.3em;
+  }
+
+  #run-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    max-width: 100% !important;
+    padding: 3px 1px !important;
+  }
+
+  .main-ide {
+    padding: 8px 3px !important;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .editeur-titre {
+    padding: 10px 5px;
+    margin-bottom: 12px;
+  }
+
+  .editor-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    margin-bottom: 8px;
+    padding: 0 2px;
+  }
+
+  .editor-pane {
+    margin-bottom: 8px;
+  }
+
+  #html-pane,
+  #css-pane,
+  #js-pane {
+    grid-column: 1;
+    min-height: 200px;
+  }
+
+  #html-pane {
+    grid-row: 1;
+  }
+
+  #css-pane {
+    grid-row: 2;
+  }
+
+  #js-pane {
+    grid-row: 3;
+    min-height: 180px;
+  }
+
+  .CodeMirror {
+    height: 200px !important;
+    font-size: 16px !important;
+  }
+
+  .outputframe {
+    height: 300px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.editor-pane {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.main-ide {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Améliorations visuelles */
+.editor-pane:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbars personnalisées */
+.CodeMirror-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.CodeMirror-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.CodeMirror-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* ============ CHATBOT GRETIX ============ */
+
+.gretix-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.gretix-modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gretix-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.gretix-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.gretix-header h3 {
+  margin: 0;
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gretix-close {
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.gretix-close:hover {
+  color: white;
+}
+
+.gretix-chat-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 400px;
+  background: #f8f9fa;
+}
+
+.gretix-message {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.gretix-bot-message {
+  justify-content: flex-start;
+}
+
+.gretix-user-message {
+  justify-content: flex-end;
+}
+
+.gretix-message-content {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.gretix-bot-message .gretix-message-content {
+  background: white;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gretix-user-message .gretix-message-content {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.gretix-input-container {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 10px;
+}
+
+#gretix-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#gretix-input:focus {
+  border-color: var(--primary-color);
+}
+
+#gretix-send {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+#gretix-send:hover {
+  transform: scale(1.05);
+}
+
+#gretix-send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gretix-typing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  max-width: 80px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gretix-typing span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.gretix-typing span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.gretix-typing span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive chatbot */
+@media screen and (max-width: 768px) {
+  .gretix-modal-content {
+    width: 95%;
+    margin: 2% auto;
+    max-height: 90vh;
+  }
+
+  .gretix-header {
+    padding: 15px;
+  }
+
+  .gretix-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gretix-header h3 {
+    font-size: 16px;
+  }
+
+  .gretix-chat-container {
+    max-height: 300px;
+    padding: 15px;
+  }
+
+  .gretix-input-container {
+    padding: 15px;
+  }
+}
